@@ -1,12 +1,9 @@
 
-
 int CameraFocusPin=9;
 int CameraShutterPin=10;
 int CameraShutterDelay=250;
 int CameraShutterTriggerDelay=250;
 int CameraShutterCount=10;
-
-
 
 void setup() {
   pinMode(CameraShutterPin,OUTPUT);
