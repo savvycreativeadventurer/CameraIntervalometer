@@ -6,6 +6,7 @@ int CameraShutterTriggerDelay=250;
 int CameraShutterCount=10;
 
 void setup() {
+  Serial.begin(9600);
   pinMode(CameraShutterPin,OUTPUT);
   pinMode(CameraFocusPin,OUTPUT);
 }
