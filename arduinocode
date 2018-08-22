@@ -1,0 +1,28 @@
+int focusPin = 6;
+int shutterPin = 7;
+
+int focusDelay = 50;
+int shutterOpen = 100;
+int betweenPictures = 10000;
+
+void setup()
+{
+    pinMode(focusPin, OUTPUT);
+    pinMode(shutterPin, OUTPUT);
+}
+
+void snapPhoto()
+{
+    digitalWrite(focusPin, HIGH);
+    delay(focusDelay);
+    digitalWrite(shutterPin, HIGH);
+    delay(shutterOpen);
+    digitalWrite(shutterPin, LOW);
+    digitalWrite(focusPin, LOW);
+}
+
+void loop()
+{
+    delay(betweenPictures);
+    snapPhoto();
+}
